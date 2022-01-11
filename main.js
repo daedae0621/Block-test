@@ -117,7 +117,9 @@ $(document).ready(function () {
     $(window).scroll(() => {
         let scrollTop = Math.ceil($(window).scrollTop());
         let btnOffset = Math.ceil($('#btn-more').offset().top - 1000);
-        // let btnOffset = ($('.award')[0].offsetTop + 100);
+
+
+
         if (scrollTop >= btnOffset) {
             let row = document.createElement('div');
             rowCount = $('.award .row').length;
@@ -144,8 +146,8 @@ $(document).ready(function () {
                         row.append(newCard);
                         i++;
                     }
-                    if (rowCount == 7)
-                        $('.btn-center').css('visibility', 'hidden');
+                    // if (rowCount == 7)
+                    //     $('.btn-center').css('visibility', 'hidden');
                 }
             }
         }
@@ -161,11 +163,21 @@ $(document).ready(function () {
     let cTop = parseInt(circle.css('top'));
     let offsetHeight = $('.award')[0].offsetHeight;
 
+
+
+
     function animation() {
         let sectionTop = Math.round($('.award')[0].offsetTop);
         let scrollTop = Math.round($(window).scrollTop());
+        console.log("st:", scrollTop);
 
-        if (sectionTop < scrollTop) {
+        let abc = document.querySelector('.award').lastElementChild.previousElementSibling;
+        let triggerTop = abc.getBoundingClientRect();
+        var bodyRect = document.body.getBoundingClientRect();
+        offset = triggerTop.top - bodyRect.top;
+        console.log(offset);
+
+        if (sectionTop < scrollTop && offset > scrollTop) {
             let shift = scrollTop - sectionTop;
             let top = shift + clTop;
             cylinderL.css('top', `${top + 100}px`);
@@ -187,8 +199,6 @@ $(document).ready(function () {
                 circle.css('top', `${newCTop + 100}px`);
             }, time);
         }
-
-        console.log($('.award')[0].offsetHeight);
     }
 
 
