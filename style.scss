@@ -120,7 +120,7 @@ nav{
                 line-height: 10px;
                 margin: auto;
                 transform: rotate(0deg);
-                transition: transform .3s ;
+                transition: transform .2s ;
 
                 &:before, &:after{
                     content:'';
@@ -579,8 +579,10 @@ aside{
         }
 
         .card-img{
+         
             .content{
                 margin: 25px;
+                
                 .tag{
                     padding: 5px 10px;
                     background: #000;
@@ -605,7 +607,10 @@ aside{
                     .title{
                         color:gray;
                     }
-                }
+                }  
+            }
+            &:hover{
+              
             }
         }
         
@@ -934,7 +939,7 @@ footer{
             #btn-more{
                 margin: 20px 0 0 0;
                 padding: 10px 80px;
-                background-color: white;
+                background-color:white;
              
                 &::after{
                     content: '';

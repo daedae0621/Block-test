@@ -143,10 +143,10 @@ nav .nav .hamburger > span {
   margin: auto;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
 }
 
 nav .nav .hamburger > span:before, nav .nav .hamburger > span:after {
