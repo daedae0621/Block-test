@@ -728,6 +728,7 @@ footer .container .info-wrap .wrap .sitemap > li {
 footer .container .info-wrap .wrap .sitemap > li a {
   -webkit-transition: all .53s;
   transition: all .53s;
+  color: white;
 }
 
 footer .container .info-wrap .wrap .sitemap > li a:hover {
@@ -993,9 +994,6 @@ footer .container .social .icon-yt {
     text-align: center;
     margin: 0;
     font-size: 20px;
-  }
-  footer .container .info-wrap .wrap .sitemap > li a {
-    color: white;
   }
   footer .container .info-wrap .wrap .info {
     text-align: center;
