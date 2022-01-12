@@ -537,8 +537,8 @@ aside .info-wrap .social .icon-yt {
   border-radius: 100px;
   position: absolute;
   z-index: 2;
-  -webkit-transition: all 0.3s cubic-bezier(0.5, 0.35, 0.68, 0.73);
-  transition: all 0.3s cubic-bezier(0.5, 0.35, 0.68, 0.73);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .award .cylinderL {
@@ -632,6 +632,17 @@ aside .info-wrap .social .icon-yt {
   left: 15px;
 }
 
+.award .row .card-img .pic {
+  overflow: hidden;
+}
+
+.award .row .card-img .pic img {
+  -webkit-transition: .8s;
+  transition: .8s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 .award .row .card-img .content {
   margin: 25px;
 }
@@ -664,6 +675,11 @@ aside .info-wrap .social .icon-yt {
 
 .award .row .card-img .content .info-wrap .title {
   color: gray;
+}
+
+.award .row .card-img:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .award .btn-center {

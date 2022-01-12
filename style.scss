@@ -482,7 +482,7 @@ aside{
         border-radius:100px;
         position: absolute;
         z-index: 2;
-        transition: all .3s cubic-bezier(.5,.35,.68,.73);
+        transition: all .3s ease;
        
     }
 
@@ -579,7 +579,14 @@ aside{
         }
 
         .card-img{
-         
+           
+            .pic{
+                overflow: hidden;
+                img{
+                    transition: .8s;
+                    transform: scale(1); 
+                }
+            }
             .content{
                 margin: 25px;
                 
@@ -610,7 +617,9 @@ aside{
                 }  
             }
             &:hover{
-              
+              img{
+                  transform: scale(1.2);
+              }
             }
         }
         
