@@ -345,7 +345,13 @@ aside .nav-link > li {
 }
 
 aside .nav-link > li a {
-  color: #d1d1d1;
+  color: white;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+aside .nav-link > li a:hover {
+  color: #cccccc;
 }
 
 aside .info-wrap {
@@ -408,6 +414,14 @@ aside .info-wrap .social .icon-yt {
   position: relative;
   margin-bottom: 140px;
   cursor: pointer;
+  overflow: hidden;
+}
+
+.video img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
 .video > button {
@@ -439,11 +453,16 @@ aside .info-wrap .social .icon-yt {
           transform: translate(-50%, -50%);
 }
 
-.video > button:hover {
+.video:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.video:hover > button {
   background-color: white;
 }
 
-.video > button:hover::before {
+.video:hover > button::before {
   border-left: 35px solid #5d5d5d;
 }
 
